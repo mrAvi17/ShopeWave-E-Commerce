@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "214039618045",
+    "project_id": "shopewave-21f74",
+    "storage_bucket": "shopewave-21f74.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:214039618045:android:5c24e35346e5447760b994",
+        "android_client_info": {
+          "package_name": "com.example.shopewave"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC1hJKGdrorpUWXCp0qSKEKyG5Z9InIs6w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

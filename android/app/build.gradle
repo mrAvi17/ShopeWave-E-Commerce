@@ -1,0 +1,51 @@
+plugins {
+    id "com.android.application"
+    id "kotlin-android"
+    id "dev.flutter.flutter-gradle-plugin"
+    // Add the Firebase Google Services plugin
+    id "com.google.gms.google-services"
+}
+
+android {
+    namespace = "com.example.shopewave"
+    compileSdk = flutter.compileSdkVersion
+    ndkVersion = flutter.ndkVersion
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_1_8
+    }
+
+    defaultConfig {
+        applicationId = "com.example.shopewave"
+        minSdk = 23 // Updated to 23 as required by firebase_auth
+        targetSdk = flutter.targetSdkVersion
+        versionCode = flutter.versionCode
+        versionName = flutter.versionName
+    }
+
+    buildTypes {
+        release {
+            signingConfig = signingConfigs.debug
+        }
+    }
+}
+
+// Define the kotlin_version variable
+ext.kotlin_version = '1.8.22'  // Specify your Kotlin version here
+
+// Add dependencies section to include Firebase SDK
+dependencies {
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version" // Ensure kotlin_version is defined
+    implementation platform('com.google.firebase:firebase-bom:33.4.0') // Use the latest Firebase BOM version
+    implementation 'com.google.firebase:firebase-analytics' // Firebase Analytics SDK
+
+    // Add other Firebase dependencies as needed
+}
+
+// Apply the Firebase Google services plugin (this should generally be at the bottom of the file)
+apply plugin: 'com.google.gms.google-services'

@@ -1,0 +1,45 @@
+name: shopewave
+description: "A new Flutter project."
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=3.5.3 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # Updated Firebase dependencies with compatible versions
+  firebase_core: ^3.6.0  # Upgrade to match cloud_firestore requirements
+  firebase_auth: ^5.3.1    # Ensure compatibility with firebase_core
+  cloud_firestore: ^5.4.4   # Keep this version as it requires firebase_core ^3.6.0
+  random_string: ^2.3.1
+  shared_preferences: ^2.3.2
+  image_picker: ^1.1.2
+  firebase_storage: ^12.3.3
+  flutter_stripe: ^11.2.0
+  http: ^1.2.2
+  url_launcher: ^6.1.6
+  geolocator: ^9.0.0
+  geocoding: ^2.0.5 # Replace with the latest version
+
+  
+
+  # Other dependencies
+  curved_navigation_bar: ^1.0.6
+
+  cupertino_icons: ^1.0.8
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^5.0.0
+
+flutter:
+  uses-material-design: true
+
+  assets:
+     - images/
